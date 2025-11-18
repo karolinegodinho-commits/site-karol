@@ -1,0 +1,166 @@
+/* --------------------------
+   ESTILO GERAL
+---------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Montserrat", sans-serif;
+}
+
+body {
+    background: #faf6f7;
+    color: #2a2a2a;
+    line-height: 1.7;
+}
+
+/* --------------------------
+   HERO (capa)
+---------------------------*/
+.hero {
+    height: 65vh;
+    background-image: url('https://images.unsplash.com/photo-1520975979651-6de0cb6c0d05?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.45);
+    backdrop-filter: blur(2px);
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    max-width: 700px;
+    animation: fadeIn 1.8s ease;
+}
+
+.hero-content h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    margin-top: 12px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* animação */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------------
+   MENU
+---------------------------*/
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 18px;
+    border-bottom: 1px solid #e7dce0;
+    background: #fff;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.2s;
+    font-size: 1rem;
+}
+
+.menu a:hover {
+    color: #b94f7a;
+}
+
+/* --------------------------
+   CONTEÚDO
+---------------------------*/
+.container {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: #b94f7a;
+}
+
+.intro p {
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+}
+
+/* --------------------------
+   CARDS
+---------------------------*/
+.cards {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #f1e3ea;
+    transition: 0.25s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #e3bfd0;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.07);
+}
+
+.card h3 {
+    color: #b94f7a;
+    margin-bottom: 10px;
+}
+
+/* --------------------------
+   RODAPÉ
+---------------------------*/
+footer {
+    margin-top: 60px;
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid #e7dce0;
+    background: #fff;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+.insta {
+    text-decoration: none;
+    color: #b94f7a;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.insta:hover {
+    opacity: 0.7;
+}

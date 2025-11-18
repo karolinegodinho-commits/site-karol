@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Textos • Voz Serena</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Textos — Horizonte</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
 
+<header class="navbar">
+  <div class="nav-inner wrapper">
+    <div class="brand"><div class="logo-mark">HF</div><div class="title">Horizonte</div></div>
     <nav class="menu">
-        <a href="index.html">Home</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="textos.html" class="active">Textos</a>
-        <a href="autocuidado.html">Autocuidado</a>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="textos.html" class="active">Textos</a>
+      <a href="autocuidado.html">Autocuidado</a>
     </nav>
+    <div class="controls"><button class="theme-toggle">Modo</button></div>
+  </div>
+</header>
 
-    <main class="container">
-        <h2 style="color:#b94f7a; margin-bottom:20px;">Textos que inspiram</h2>
+<main class="wrapper" style="padding:48px 20px 80px">
+  <h2 style="font-family:'Playfair Display',serif;color:var(--accent);margin-bottom:18px">Textos</h2>
 
-        <p>
-            Aqui você encontra textos para mulheres que vivem intensamente,  
-            que sentem profundamente e que não têm medo de olhar para dentro.  
-            Palavras que abraçam, fortalecem e despertam.
-        </p>
+  <section class="posts-grid">
+    <a class="card reveal" href="post.html">
+      <div class="card-visual" style="background-image:url('https://images.unsplash.com/photo-1529633674551-b8d3b2fc031d?auto=format&fit=crop&w=1400&q=80')"></div>
+      <div class="card-body">
+        <div class="card-tag">Empoderamento</div>
+        <div class="card-title">A força silenciosa que você carrega</div>
+        <div class="card-excerpt">Quando sentir demais é a maneira mais honesta de viver.</div>
+      </div>
+    </a>
 
-        <div class="cards" style="margin-top:35px;">
+    <a class="card reveal" href="post.html">
+      <div class="card-visual" style="background-image:url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80')"></div>
+      <div class="card-body">
+        <div class="card-tag">Ritual</div>
+        <div class="card-title">Rituais que sustentam a calma</div>
+        <div class="card-excerpt">Micro-hábitos para dias menos dispersos e mais cheios de sentido.</div>
+      </div>
+    </a>
 
-            <a href="post-modelo.html" class="card">
-                <h3>🌿 A força que nasce do silêncio</h3>
-                <p>Um texto sobre recolhimento, autocura e reencontros internos.</p>
-            </a>
+    <a class="card reveal" href="post.html">
+      <div class="card-visual" style="background-image:url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1400&q=80')"></div>
+      <div class="card-body">
+        <div class="card-tag">Verdade</div>
+        <div class="card-title">A coragem de ser autêntica</div>
+        <div class="card-excerpt">Como praticar a verdade sem perder a compaixão por si mesma.</div>
+      </div>
+    </a>
+  </section>
 
-            <a href="post-modelo.html" class="card">
-                <h3>🔥 Você não é exagero — é intensidade</h3>
-                <p>Para mulheres que sentem tudo profundamente.</p>
-            </a>
+</main>
 
-            <a href="post-modelo.html" class="card">
-                <h3>💗 Amar sem perder a si mesma</h3>
-                <p>Para mulheres que amam muito, mas que também precisam se amar.</p>
-            </a>
-
-            <a href="post-modelo.html" class="card">
-                <h3>✨ Quando você volta para si</h3>
-                <p>A vida fica mais leve quando você se reencontra.</p>
-            </a>
-
-        </div>
-
-    </main>
-
-    <footer>
-        <p>© 2025 Voz Serena</p>
-        <a class="insta" href="https://www.instagram.com/karoline_mrqs?igsh=MXI1NjN3NHZzYmgwaQ==" target="_blank">
-            Meu Instagram
-        </a>
-    </footer>
+<footer class="footer">
+  <p>© 2025 Horizonte</p>
+  <p><a href="https://www.instagram.com/karoline_mrqs" target="_blank">Instagram</a></p>
+</footer>
 
 </body>
 </html>

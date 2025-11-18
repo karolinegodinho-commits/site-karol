@@ -1,166 +1,229 @@
-/* --------------------------
-   ESTILO GERAL
----------------------------*/
+/* ------------------------------ */
+/*   ESTILO GERAL E TIPOGRAFIA   */
+/* ------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family:Inter:wght@300;400;600;700&family:Playfair+Display:wght@400;600;700&display=swap');
+
+:root {
+    --bg: #faf7f8;
+    --text: #2a2a2a;
+    --accent: #b94f7a; /* rosa profundo elegante */
+    --accent-light: #e9b8ca;
+    --card-bg: #ffffff;
+    --border: #e3dce0;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", "Montserrat", sans-serif;
 }
 
 body {
-    background: #faf6f7;
-    color: #2a2a2a;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
     line-height: 1.7;
+    letter-spacing: 0.3px;
 }
 
-/* --------------------------
-   HERO (capa)
----------------------------*/
-.hero {
-    height: 65vh;
-    background-image: url('https://images.unsplash.com/photo-1520975979651-6de0cb6c0d05?auto=format&fit=crop&w=1200&q=80');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* ------------------------------ */
+/*   NAVEGAÇÃO SUPERIOR           */
+/* ------------------------------ */
 
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(20, 20, 20, 0.45);
-    backdrop-filter: blur(2px);
-}
-
-.hero-content {
-    position: relative;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    max-width: 700px;
-    animation: fadeIn 1.8s ease;
-}
-
-.hero-content h1 {
-    font-size: 3.6rem;
-    font-weight: 700;
-    letter-spacing: -1px;
-}
-
-.hero-content p {
-    margin-top: 12px;
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-/* animação */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* --------------------------
-   MENU
----------------------------*/
 .menu {
+    width: 100%;
+    background: #ffffffcc;
+    backdrop-filter: blur(12px);
+    padding: 15px 40px;
+    border-bottom: 1px solid var(--border);
     display: flex;
     justify-content: center;
-    gap: 32px;
-    padding: 18px;
-    border-bottom: 1px solid #e7dce0;
-    background: #fff;
+    gap: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
 }
 
 .menu a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    transition: 0.2s;
-    font-size: 1rem;
+    transition: 0.3s;
+    padding-bottom: 4px;
 }
 
 .menu a:hover {
-    color: #b94f7a;
+    color: var(--accent);
 }
 
-/* --------------------------
-   CONTEÚDO
----------------------------*/
+.menu .active {
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+/* ------------------------------ */
+/*   LAYOUT PADRÃO                */
+/* ------------------------------ */
+
 .container {
+    width: 100%;
     max-width: 950px;
-    margin: 40px auto;
-    padding: 20px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
-.intro h2 {
-    font-size: 2rem;
-    margin-bottom: 12px;
-    color: #b94f7a;
+/* ------------------------------ */
+/*   TÍTULOS EDITORIAIS           */
+/* ------------------------------ */
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    color: var(--accent);
 }
 
-.intro p {
-    margin-bottom: 18px;
-    font-size: 1.1rem;
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
 }
 
-/* --------------------------
-   CARDS
----------------------------*/
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+/* ------------------------------ */
+/*   CARDS DE CONTEÚDO            */
+/* ------------------------------ */
+
 .cards {
-    margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 28px;
+    margin-top: 35px;
 }
 
 .card {
-    background: #ffffff;
-    padding: 22px;
-    border-radius: 10px;
+    padding: 24px;
+    background: var(--card-bg);
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    transition: 0.35s ease;
     text-decoration: none;
-    color: #333;
-    border: 1px solid #f1e3ea;
-    transition: 0.25s ease;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    color: var(--text);
 }
 
 .card:hover {
     transform: translateY(-6px);
-    border-color: #e3bfd0;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.07);
+    box-shadow: 0 8px 20px #00000010;
 }
 
-.card h3 {
-    color: #b94f7a;
-    margin-bottom: 10px;
+.card p {
+    margin-top: 5px;
+    color: #4e4e4e;
 }
 
-/* --------------------------
-   RODAPÉ
----------------------------*/
-footer {
-    margin-top: 60px;
-    padding: 30px;
-    text-align: center;
-    border-top: 1px solid #e7dce0;
-    background: #fff;
+.noclick { cursor: default; }
+
+/* ------------------------------ */
+/*   PÁGINA DE POSTS INDIVIDUAL   */
+/* ------------------------------ */
+
+.post-container {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
-footer p {
-    margin-bottom: 8px;
+.post h1 {
+    margin-bottom: 20px;
 }
 
-.insta {
+.post p {
+    margin: 18px 0;
+    font-size: 1.1rem;
+}
+
+/* ------------------------------ */
+/*   SOBRE - BIO / FOTO           */
+/* ------------------------------ */
+
+.about-box {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.about-box img {
+    width: 220px;
+    border-radius: 18px;
+    border: 2px solid var(--accent-light);
+    object-fit: cover;
+}
+
+/* ------------------------------ */
+/*   BOTÕES                       */
+/* ------------------------------ */
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 12px 26px;
+    border-radius: 8px;
     text-decoration: none;
-    color: #b94f7a;
-    font-weight: bold;
+    margin-top: 25px;
     transition: 0.3s;
 }
 
-.insta:hover {
-    opacity: 0.7;
+.btn:hover {
+    background: #8c3558;
 }
+
+/* ------------------------------ */
+/*   RODAPÉ                       */
+/* ------------------------------ */
+
+footer {
+    margin-top: 100px;
+    padding: 40px;
+    background: #fff;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+footer p {
+    color: #666;
+}
+
+footer .insta {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer .insta:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------ */
+/*   RESPONSIVIDADE               */
+/* ------------------------------ */
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+
+    .about-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+

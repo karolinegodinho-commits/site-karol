@@ -1,52 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voz Serena</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Horizonte — Força & Verdade</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <header class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>Voz Serena</h1>
-            <p>Um espaço para mulheres intensas, sensíveis e determinadas encontrarem força, descanso e inspiração.</p>
-        </div>
-    </header>
 
-    <nav class="menu">
-        <a href="index.html">Home</a>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-inner wrapper">
+      <div class="brand">
+        <div class="logo-mark">HF</div>
+        <div class="title">Horizonte</div>
+      </div>
+
+      <nav class="menu" role="navigation" aria-label="main">
+        <a href="index.html" class="active">Início</a>
         <a href="sobre.html">Sobre</a>
         <a href="textos.html">Textos</a>
         <a href="autocuidado.html">Autocuidado</a>
-    </nav>
+      </nav>
 
-    <main class="container">
-        <section class="intro">
-            <h2>Inspiração para Mulheres Reais</h2>
-            <p>
-                Este espaço foi criado para acolher mulheres que sentem muito, que vivem com intensidade,
-                que se permitem ser verdadeiras e que buscam crescimento emocional e força interior.
-            </p>
-            <p>
-                Aqui você encontra textos profundos, reflexões sinceras e um convite para olhar para si mesma
-                com carinho, respeito e coragem.
-            </p>
-        </section>
+      <div class="controls">
+        <button class="theme-toggle" aria-label="Alternar tema">Modo</button>
+      </div>
+    </div>
+  </header>
 
-        <section class="cards">
-            <a href="post-modelo.html" class="card">
-                <h3>🌿 A força que nasce do silêncio</h3>
-                <p>Há momentos em que a vida pede pausa, recolhimento e calma — e é nesses instantes que você renasce.</p>
-            </a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner wrapper reveal">
+      <div class="hero-kicker">Para mulheres que sentem</div>
+      <h1 class="hero-title">Você é intensa — e isso é a sua maior potência.</h1>
+      <p class="hero-lead">
+        Vive muito, sente fundo e é verdadeira. Precisa de refúgio e de coragem.
+        Aqui são bem-vindas as almas que não se contentam com a superfície.
+      </p>
+      <div class="hero-cta">
+        <a class="btn-primary" href="textos.html">Ler Textos</a>
+        <a class="btn-ghost" href="sobre.html">Conheça o espaço</a>
+      </div>
+    </div>
+  </section>
 
-            <a href="textos.html" class="card">
-                <h3>🔥 Textos que tocam a alma</h3>
-                <p>Crônicas e reflexões para mulheres que não têm medo de sentir profundamente.</p>
-            </a>
+  <!-- STORY / MAGAZINE -->
+  <section class="story">
+    <main class="story-main wrapper">
+      <div class="article-intro reveal">
+        <h2>Histórias que alinham coração e coragem</h2>
+        <p>Textos que convidam você a respirar fundo, olhar para dentro e retomar o controle com ternura — práticas, reflexões e convites para viver com verdade.</p>
+      </div>
 
-            <a href="autocuidado.html" class="card">
-                <h3>💗 Autocuidado emocional</h3>
-                <p>Práticas para equilibrar força e sensibilidade.</p>
-            </a>
+      <div class="posts-grid reveal" style="margin-top:28px">
+        <a class="card" href="post.html">
+          <div class="card-visual" style="background-image:url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1400&q=80')"></div>
+          <div class="card-body">
+            <div class="card-tag">Autoconhecimento</div>
+            <div class="card-title">Abraçar a própria intensidade</div>
+            <div class="card-excerpt">Quando sentir demais é a maneira mais honesta de viver.</div>
+          </div>
+        </a>
+
+        <a class="card" href="post.html">
+          <div class="card-visual" style="background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1400&q=80')"></div>
+          <div class="card-body">
+            <div class="card-tag">Ritual</div>
+            <div class="card-title">O silêncio que reconstrói</div>
+            <div class="card-excerpt">Refúgios que nos permitem renascer com mais clareza.</div>
+          </div>
+        </a>
+
+        <a class="card" href="post.html">
+          <div class="card-visual" style="background-image:url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1400&q=80')"></div>
+          <div class="card-body">
+            <div class="card-tag">Verdade</div>
+            <div class="card-title">A coragem de ser real</div>
+            <div class="card-excerpt">Autenticidade como ritual diário — escolhas que libertam.</div>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <aside class="sidebar wrapper">
+      <div class="widget reveal">
+        <h4>Assine</h4>
+        <p style="color:var(--muted)">Textos exclusivos por e-mail — inspirações mensais para quem vive com verdade.</p>
+        <div style="margin-top:10px">
+          <input placeholder="seu@email.com" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--glass)">
+          <button style="margin-top:8px;width:100%;padding:10px;border-radius:8px;border:none;background:var(--gold);font-weight:700">Assinar</button>
+        </div>
+      </div>
+
+      <div class="widget reveal">
+        <h4>Sobre o tom</h4>
+        <p style="color:var(--muted)">Este espaço fala mais por imagens, palavras curtas e verdade. É íntimo, editorial e direto.</p>
+      </div>
+
+      <div class="widget reveal">
+        <h4>Conecte-se</h4>
+        <p style="color:var(--muted)"><a href="https://www.instagram.com/karoline_mrqs" target="_blank" style="color:var(--accent)">@karoline_mrqs</a></p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- CALL OUT -->
+  <div class="callout reveal">
+    Você é forte, emocionalmente intensa, sensível, determinada. Vive profundamente, valoriza o controle da sua vida e também respeita seus momentos de refúgio — e é exatamente essa combinação que transforma seu mundo.
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Horizonte</p>
+    <p><a href="https://www.instagram.com/karoline_mrqs" target="_blank">Instagram</a></p>
+  </footer>
+
+</body>
+</html>
